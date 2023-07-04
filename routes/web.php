@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,4 +19,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified'])
 Route::controller(AdminController::class)->group(function(){
     Route::get('/admin/logout', 'AdminLogout')->name('admin.logout');
 
+});
+
+//User management All Route
+Route::controller(UserController::class)->group(function(){
+   Route::get('/view/user', 'ViewUser')->name('view.user');
+   Route::get('/add/user', 'AddUser')->name('add.user');
+   Route::post('/store/user', 'StoreUser')->name('store.user');
 });

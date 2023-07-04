@@ -19,7 +19,7 @@
       <ul class="sidebar-menu" data-widget="tree">  
 		  
 		<li>
-          <a href="index.html">
+          <a href="{{url('/dashboard')}}">
             <i data-feather="pie-chart"></i>
 			<span>Dashboard</span>
           </a>
@@ -28,14 +28,14 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>Application</span>
+            <span>User Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
-            <li><a href="calendar.html"><i class="ti-more"></i>Calendar</a></li>
+            <li><a href="{{route('view.user')}}"><i class="ti-more"></i>View User</a></li>
+            <li><a href="{{route('add.user')}}"><i class="ti-more"></i>Add User</a></li>
           </ul>
         </li> 
 		  
