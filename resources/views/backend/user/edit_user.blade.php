@@ -51,14 +51,14 @@
 
             
 
-
+						<div class="row">
               <div class="col-md-12">
               <div class="form-group">
 								<h5>User-Email <span class="text-danger">*</span></h5>
 								<div class="controls">
 									<input type="email" name="email" class="form-control" value="{{$editData->email}}" required=""></div>				
 							</div>
-              </div>
+              </div> </div>
               <!-- end of col -->
            
 					

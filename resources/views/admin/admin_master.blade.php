@@ -70,7 +70,7 @@
 
                                 Swal.fire({
                                   title: 'Are you sure?',
-                                   text: "You want to delete this!",
+                                  text: 'You want to delete this!',
                                   icon: 'warning',
                                   showCancelButton: true,
                                   confirmButtonColor: '#3085d6',
@@ -90,7 +90,7 @@
                                 })
 
                     </script>
-//end of sweet alert
+
 
 
 	
