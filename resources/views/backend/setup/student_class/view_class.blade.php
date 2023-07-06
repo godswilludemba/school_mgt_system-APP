@@ -11,8 +11,8 @@
 			<div class="col-12">
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">User List</h3>
-          <a href="{{route('add.user')}}" style="float: right;" class="btn btn-info mb-5">ADD USER</a>
+				  <h3 class="box-title">Student Class List</h3>
+          <a href="{{route('add.student.class')}}" style="float: right;" class="btn-rounded btn-info mb-5 px-3 py-2">Add Student Class</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -20,24 +20,20 @@
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th width="5%">S/N</th>
-								<th>Role</th>
+								<th width="5%">S/N</th>							
 								<th>Name</th>
-								<th>Email</th>
 								<th width="20%">Action</th>
 							
 							</tr>
 						</thead>
 						<tbody>
-              @foreach($allData as $key => $user)
+              @foreach($allData as $key => $student)
 							<tr>
 								<td>{{$key+1}}</td>
-								<td>{{$user->userType}}</td>
-								<td>{{$user->name}}</td>
-								<td>{{$user->email}}</td>
+								<td>{{$student->name}}</td>							
 								<td>
-                  <a href="{{route('edit.user', $user->id)}}" class="btn btn-info">Edit</a>
-                  <a href="{{route('delete.user', $user->id)}}" class="btn btn-danger" id="delete">Delete</a>
+                  <a href="{{route('edit.student.class', $student->id)}}" class="btn btn-info">Edit</a>
+                  <a href="{{route('delete.student.class', $student->id)}}" class="btn btn-danger" id="delete">Delete</a>
                 </td>
 						
 							</tr>
