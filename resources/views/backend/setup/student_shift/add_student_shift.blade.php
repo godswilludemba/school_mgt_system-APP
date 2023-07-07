@@ -9,23 +9,23 @@
 		 <!-- Basic Forms -->
 		  <div class="box">
 			<div class="box-header with-border">
-			  <h4 class="box-title">Edit Student Group </h4>
+			  <h4 class="box-title">Add Student Shift</h4>
 			  	</div>
 			<!-- /.box-header -->
 			<div class="box-body">
 			  <div class="row">
 				<div class="col">
 
-					<form method="POST" action="{{route('update.student.group',$editData->id)}}">
+					<form method="POST" action="{{route('store.student.shift')}}">
             @csrf
 					  <div class="row">
 						<div class="col-12">
 
            
               <div class="form-group">
-								<h5>Edit Student group<span class="text-danger">*</span></h5>
+								<h5>Student Shift Name<span class="text-danger">*</span></h5>
 								<div class="controls">
-									<input  type="text"  name="name" class="form-control" value="{{$editData->name}}">
+									<input  type="text"  name="name" class="form-control">
                   @error('name')
                  <span class="text-danger"> {{$message}}</span>
                   @enderror
@@ -39,7 +39,7 @@
 					  </div>
 
 						<div class="text-xs-right">
-						<input type="submit" class="btn btn-info mb-5 ml-3"  value="Update"></input>
+						<input type="submit" class="btn btn-info mb-5 ml-3"  value="Submit"></input>
 						</div>
 					</form>
 
