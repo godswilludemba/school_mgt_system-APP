@@ -30,10 +30,10 @@
               @foreach($allData as $key => $amount)
 							<tr>
 								<td>{{$key+1}}</td>
-								<td>{{$amount->fee_category_id}}</td>							
+								<td>{{$amount['fee_category']['name']}}</td>							
 								<td>
-                  <a href="{{route('edit.fee.category', $amount->id)}}" class="btn btn-info">Edit</a>
-                  <a href="{{route('delete.fee.category', $amount->id)}}" class="btn btn-danger" id="delete">Delete</a>
+                  <a href="" class="btn btn-info">Edit</a>
+                  <a href="" class="btn btn-danger" id="delete">Delete</a>
                 </td>
 						
 							</tr>
