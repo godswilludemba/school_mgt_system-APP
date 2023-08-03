@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\FeeCategoryAmountController;
 use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
@@ -92,12 +93,21 @@ Route::prefix('setup')->group(function(){
     Route::get('/delete/fee/category/{id}',  [FeeCategoryController::class, 'DeleteFeeCategory'])->name('delete.fee.category');
 
     //Fee Category Amount Route
+    //much relationship was created here please study it.
     Route::get('/fee/amount/view',  [FeeCategoryAmountController::class, 'ViewFeeCategoryAmount'])->name('fee.amount.view');
-    Route::get('add/fee/amount',  [FeeCategoryAmountController::class, 'AddFeeAmount'])->name('add.fee.amount');
-    Route::post('store/fee/amount',  [FeeCategoryAmountController::class, 'StoreFeeAmount'])->name('store.fee.amount');
-    Route::get('edit/fee/amount/{fee_category_id}',  [FeeCategoryAmountController::class, 'EditFeeAmount'])->name('edit.fee.amount');
-    Route::post('update/fee/amount/{fee_category_id}',  [FeeCategoryAmountController::class, 'UpdateFeeAmount'])->name('update.fee.amount');
-    Route::get('fee/amount/details{fee_category_id}',  [FeeCategoryAmountController::class, 'FeeAmountDetails'])->name('fee.amount.details');
+    Route::get('/add/fee/amount',  [FeeCategoryAmountController::class, 'AddFeeAmount'])->name('add.fee.amount');
+    Route::post('/store/fee/amount',  [FeeCategoryAmountController::class, 'StoreFeeAmount'])->name('store.fee.amount');
+    Route::get('/edit/fee/amount/{fee_category_id}',  [FeeCategoryAmountController::class, 'EditFeeAmount'])->name('edit.fee.amount');
+    Route::post('/update/fee/amount/{fee_category_id}',  [FeeCategoryAmountController::class, 'UpdateFeeAmount'])->name('update.fee.amount');
+    Route::get('/fee/amount/details{fee_category_id}',  [FeeCategoryAmountController::class, 'FeeAmountDetails'])->name('fee.amount.details');
+
+    //exam type all route
+    Route::get('/exam/type/view',  [ExamTypeController::class, 'ViewExamType'])->name('exam.type.view');
+    Route::get('/add/exam/type',  [ExamTypeController::class, 'AddExamType'])->name('add.exam.type');
+    Route::post('/store/exam/type',  [ExamTypeController::class, 'StoreExamType'])->name('store.exam.type');
+    Route::get('/edit/exam/type/{id}',  [ExamTypeController::class, 'EditExamType'])->name('edit.exam.type');
+    Route::post('/exam/type/update/{id}',  [ExamTypeController::class, 'ExamTypeUpdate'])->name('update.exam.type');
+    Route::get('/delete/exam/type/{id}',  [ExamTypeController::class, 'DeleteExamType'])->name('delete.exam.type');
 
  });
 
