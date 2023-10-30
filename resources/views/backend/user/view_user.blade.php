@@ -24,7 +24,7 @@
 								<th>Role</th>
 								<th>Name</th>
 								<th>Email</th>
-								<th width="20%">Action</th>
+								<th width="25%">Action</th>
 							
 							</tr>
 						</thead>
