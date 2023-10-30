@@ -12,7 +12,7 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Assign Subject List</h3>
-          <a href="{{route('add.fee.amount')}}" style="float: right;" class="btn-rounded btn-info mb-5 px-3 py-2">Add Assign Subject</a>
+          <a href="{{route('assign.subject.add')}}" style="float: right;" class="btn-rounded btn-info mb-5 px-3 py-2">Add Assign Subject</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -22,7 +22,7 @@
 							<tr>
 								<th width="5%">S/N</th>							
 								<th>Class Name</th>
-								<th width="20%">Action</th>
+								<th width="25%">Action</th>
 							
 							</tr>
 						</thead>
@@ -30,7 +30,7 @@
               @foreach($allData as $key => $assign)
 							<tr>
 								<td>{{$key+1}}</td>
-								<td>{{$assign->class_id}}</td>							
+								<td>{{$assign['student_class']['name']}}</td>							
 								<td>
                   <a href="" class="btn btn-info">Edit</a>
                   <a href="" class="btn btn-primary" >Details</a>

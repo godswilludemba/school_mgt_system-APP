@@ -123,8 +123,8 @@ Route::prefix('setup')->group(function(){
     //Assign Subject Route
     //much relationship was created here please study it.
     Route::get('/assign/subject/view',  [AssignSubjectController::class, 'ViewAssignSubj'])->name('assign.subject.view');
-    Route::get('/add/fee/amount',  [FeeCategoryAmountController::class, 'AddFeeAmount'])->name('add.fee.amount');
-    Route::post('/store/fee/amount',  [FeeCategoryAmountController::class, 'StoreFeeAmount'])->name('store.fee.amount');
+    Route::get('/assign/subject/add',  [AssignSubjectController::class, 'AssignSubjAdd'])->name('assign.subject.add');
+    Route::post('/store/assign/subject',  [AssignSubjectController::class, 'StoreAssignSubj'])->name('store.assign.subject');
     Route::get('/edit/fee/amount/{fee_category_id}',  [FeeCategoryAmountController::class, 'EditFeeAmount'])->name('edit.fee.amount');
     Route::post('/update/fee/amount/{fee_category_id}',  [FeeCategoryAmountController::class, 'UpdateFeeAmount'])->name('update.fee.amount');
     Route::get('/fee/amount/details{fee_category_id}',  [FeeCategoryAmountController::class, 'FeeAmountDetails'])->name('fee.amount.details');

@@ -22,7 +22,7 @@
 							<tr>
 								<th width="5%">S/N</th>							
 								<th>Name</th>
-								<th width="20%">Action</th>
+								<th width="25%">Action</th>
 							
 							</tr>
 						</thead>
