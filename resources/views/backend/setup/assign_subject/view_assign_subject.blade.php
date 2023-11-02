@@ -32,7 +32,7 @@
 								<td>{{$key+1}}</td>
 								<td>{{$assign['student_class']['name']}}</td>							
 								<td>
-                  <a href="" class="btn btn-info">Edit</a>
+                  <a href="{{route('assign.subject.edit',$assign->class_id)}}" class="btn btn-info">Edit</a>
                   <a href="" class="btn btn-primary" >Details</a>
                 </td>
 						
