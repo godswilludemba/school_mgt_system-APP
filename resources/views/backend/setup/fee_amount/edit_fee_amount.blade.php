@@ -33,7 +33,8 @@
                   
 										<option value="" selected="" disabled="">Select Fee Category</option>
                     @foreach($fee_categories as $category)
-										<option value="{{$category->id}}" {{($editData[0]->fee_category_id == $category->id? "selected" : "")}}>{{$category->name }}</option>
+										<option value="{{$category->id}}" {{($editData[0]->fee_category_id == $category->id? "selected" : "")}}>
+											{{$category->name }}</option>
 									@endforeach
 									</select>
               </div>
