@@ -134,9 +134,9 @@ Route::prefix('setup')->group(function(){
      Route::get('/designation/view',  [DesignationController::class, 'ViewDesignation'])->name('designation.view');
      Route::get('/add/designation',  [DesignationController::class, 'AddDesignation'])->name('add.designation');
      Route::post('/store/designation',  [DesignationController::class, 'StoreDesignation'])->name('store.designation');
-     Route::get('/edit/school/subject/{id}',  [SchoolSubjectController::class, 'EditSchSubj'])->name('edit.school.subject');
-     Route::post('/school/subject/update/{id}',  [SchoolSubjectController::class, 'SchSubjUpdate'])->name('update.school.subject');
-     Route::get('/delete/school/subject/{id}',  [SchoolSubjectController::class, 'DeleteSchSubj'])->name('delete.school.subject');  
+     Route::get('/edit/designation/{id}',  [DesignationController::class, 'EditDesignation'])->name('edit.designation');
+     Route::post('/designation/update/{id}',  [DesignationController::class, 'DesignationUpdate'])->name('update.designation');
+     Route::get('/delete/designation/{id}',  [DesignationController::class, 'DeleteDesignation'])->name('delete.designation');  
  
 
  });
