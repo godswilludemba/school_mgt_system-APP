@@ -16,7 +16,8 @@ class FeeCategoryAmountController extends Controller
     {
        //import the model for all the things we are about to join.
       //  for use to join the table by group, we comment out our first logic that enabled us visualized the id below.
-      //  $data['allData'] = FeeCategoryAmount::all(); then write our join table by group logic
+    //  $data['allData'] = FeeCategoryAmount::all(); 
+      //then write our join table by group logic
 
       $data['allData'] = FeeCategoryAmount::select('fee_category_id')->groupBy('fee_category_id')->get();
 

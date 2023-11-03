@@ -11,8 +11,8 @@
 			<div class="col-12">
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Fee Category Amount List</h3>
-          <a href="{{route('add.fee.amount')}}" style="float: right;" class="btn-rounded btn-info mb-5 px-3 py-2">Add Fee Amount</a>
+				  <h3 class="box-title">Designation List</h3>
+          <a href="{{route('add.designation')}}" style="float: right;" class="btn-rounded btn-info mb-5 px-3 py-2">Add Designation</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -21,19 +21,19 @@
 						<thead>
 							<tr>
 								<th width="5%">S/N</th>							
-								<th>Fee Category</th>
+								<th>Name</th>
 								<th width="25%">Action</th>
 							
 							</tr>
 						</thead>
 						<tbody>
-              @foreach($allData as $key => $amount)
+              @foreach($allData as $key => $designation)
 							<tr>
 								<td>{{$key+1}}</td>
-							<td>{{$amount['fee_category']['name'] }}</td>								
+								<td>{{$designation->name}}</td>							
 								<td>
-                  <a href="{{route('edit.fee.amount',$amount->fee_category_id)}}" class="btn btn-info">Edit</a>
-                  <a href="{{route('fee.amount.details',$amount->fee_category_id)}}" class="btn btn-primary" >Details</a>
+                  <a href="{{route('edit.school.subject', $designation->id)}}" class="btn btn-info">Edit</a>
+                  <a href="{{route('delete.school.subject', $designation->id)}}" class="btn btn-danger" id="delete">Delete</a>
                 </td>
 						
 							</tr>
