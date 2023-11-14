@@ -25,7 +25,8 @@
                 url('upload/no_image.jpg')}}" alt="">
 						</a>
 						<h4 class="mt-2 mb-0"><a class="hover-info text-white">User Name : {{$user->name}}</a></h4>
-						<span><i class="fa fa-user w-20 " aria-hidden="true"></i> User Role : {{$user->userType}}</span>
+						<span><i class="fa fa-user w-20 " aria-hidden="true"></i> UserType : {{$user->userType}}</span><br>
+						<span><i class="fa fa-user w-20 " aria-hidden="true"></i> User-Role : {{$user->role}}</span>
             <h6 ><i class="hover-secondary text-white">User e-mail : {{$user->email}}</i> </h6>
 					  </div>
 

@@ -10,7 +10,7 @@ class UserController extends Controller
 {
   public function ViewUser()
   {
-     $data['allData'] = User::all();
+     $data['allData'] = User::where('userType', 'Admin')->get();
      return view('backend.user.view_user', $data);
   }// End Method
 
@@ -26,16 +26,19 @@ class UserController extends Controller
      $validatedDate = $request->validate([
         'email' => 'required | unique:users',
         'name' => 'required',
-        'password' =>'required',
-        'userType' => 'required'
+      //   'password' =>'required',
+      //   'userType' => 'required'
 
      ]);
 
      $data = new User();
-     $data->email = $request->email;
-     $data->userType = $request->userType;
+     $code = rand(0000, 9999);
+     $data->role = $request->role;
+     $data->userType = 'Admin';
      $data->name = $request->name;
-     $data->password = bcrypt($request->password);
+     $data->email = $request->email;
+     $data->password = bcrypt($code);
+     $data->code = $code;
      $data->save();
      
 
@@ -59,7 +62,7 @@ class UserController extends Controller
    {
     $data =  User::find($id);
     $data->email = $request->email;
-    $data->userType = $request->userType;
+    $data->role = $request->role;
     $data->name = $request->name;  
     $data->save();
     
