@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\StudentShiftController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
+use App\Http\Controllers\Backend\Student\StudentRegController;
 use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -139,6 +140,13 @@ Route::prefix('setup')->group(function(){
      Route::get('/delete/designation/{id}',  [DesignationController::class, 'DeleteDesignation'])->name('delete.designation');  
  
 
+ });
+
+ //Student Management All Route
+ Route::prefix('students')->group(function(){
+    Route::get('/registration/view',  [StudentRegController::class, 'ViewStudentRegistration'])->name('student.registration.view');
+   
+    
  });
 
 

@@ -13,11 +13,26 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('userType')->nullable();
+            $table->string('userType')->nullable()->comment('Student, Employee, Admin');
             $table->string('name')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('mobile')->nullable();
+            $table->string('address')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('image')->nullable();
+            $table->string('status')->default(1)->comment('0 = inactive. 1 = active');
+            $table->string('fathers_name')->nullable();
+            $table->string('mothers_name')->nullable();
+            $table->string('religion')->nullable();
+            $table->string('id_no')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('code')->nullable();
+            $table->string('role')->nullable()->comment('Admin = head of software,Operator = computer operator, User = employee ');
+            $table->string('join_date')->nullable();
+            $table->string('designation_id')->nullable();
+            $table->string('salary')->nullable();
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
